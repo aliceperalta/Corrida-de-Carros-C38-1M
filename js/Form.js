@@ -26,9 +26,9 @@ class Form {
       Olá ${this.input.value()}
       </br>espere outro jogador entrar...`;
       this.greeting.html(message);
-      playerCount += 1;
-      player.name = this.input.value();
-      player.index = playerCount; 
+      playerCount += 1; //aumenta a contagem de jogador em +1
+      player.name = this.input.value(); //adiciona o nome do jogador no banco de dados
+      player.index = playerCount; //liga o indice a contagem de jogador
       player.updateCount(playerCount); //atualiza a contagem dos jogadores conforme Player.js
     });
   }
