@@ -26,8 +26,8 @@ function setup() {
 function draw() {
   background(bgImg);
 
-  if (playerCount === 2){
-    game.update(1);
+  if (playerCount === 2){ //se tiver 2 jogadores registrados
+    game.update(1); //atualizar o estado de jogo para 1 (PLAY)
   }
 
   if (gameState === 1) {
