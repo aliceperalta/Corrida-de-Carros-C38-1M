@@ -12,14 +12,6 @@ class Form {
     this.playButton.position(width / 2 - 90, height / 2 - 20);
     this.greeting.position(width / 2 - 300, height / 2 - 100);
   }
-
- /* setElementsStyle() {
-    this.titleImg.class("gameTitle");
-    this.input.class("customInput");
-    this.playButton.class("customButton");
-    this.greeting.class("greeting");
-  } */
-
   hide() {
     this.greeting.hide();
     this.playButton.hide();
@@ -36,15 +28,13 @@ class Form {
       this.greeting.html(message);
       playerCount += 1;
       player.name = this.input.value();
-      player.index = playerCount;
-      player.updateCount(playerCount);
-     
+      player.index = playerCount; 
+      player.updateCount(playerCount); //atualiza a contagem dos jogadores conforme Player.js
     });
   }
 
   display() {
    this.setElementsPosition();
-    //this.setElementsStyle();
     this.handleMousePressed();
   }
 }
