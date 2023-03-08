@@ -1,10 +1,10 @@
 class Player {
   constructor (){}
-
+//metodo de obter a contagem de jogadores
 getCount(){
-  var playerCountRef = database.ref('playerCount');
-  playerCountRef.on ("value",(data)=>{
-      playerCount = data.val();
+  var playerCountRef = database.ref('playerCount'); //variavel de quantidade de jogadores ligada ao nó no banco de dados
+  playerCountRef.on ("value",(data)=>{ //função arrow/seta para obter o valor
+      playerCount = data.val(); //aumenta em +1 a contagem a cada nome adicionado
 
   })
 }
